@@ -1,0 +1,205 @@
+_01:43:48.968 [Test worker] DEBUG groovyx.net.http.RESTClient - GET http://localhost:8080/users
+}01:43:49.079 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+j01:43:49.088 [Test worker] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+f01:43:49.099 [Test worker] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+g01:43:49.105 [Test worker] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+i01:43:49.106 [Test worker] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+g01:43:49.106 [Test worker] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+d01:43:49.106 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+m01:43:49.106 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /users HTTP/1.1
+Y01:43:49.107 [Test worker] DEBUG org.apache.http.wire - >> "GET /users HTTP/1.1[\r][\n]"
+Q01:43:49.108 [Test worker] DEBUG org.apache.http.wire - >> "Accept: */*[\r][\n]"
+Z01:43:49.108 [Test worker] DEBUG org.apache.http.wire - >> "Host: localhost:8080[\r][\n]"
+\01:43:49.108 [Test worker] DEBUG org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+F01:43:49.108 [Test worker] DEBUG org.apache.http.wire - >> "[\r][\n]"
+R01:43:49.108 [Test worker] DEBUG org.apache.http.headers - >> GET /users HTTP/1.1
+J01:43:49.108 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+S01:43:49.108 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+U01:43:49.108 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+U01:43:49.295 [Test worker] DEBUG org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+_01:43:49.296 [Test worker] DEBUG org.apache.http.wire - << "Server: Apache-Coyote/1.1[\r][\n]"
+r01:43:49.297 [Test worker] DEBUG org.apache.http.wire - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+`01:43:49.297 [Test worker] DEBUG org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+i01:43:49.297 [Test worker] DEBUG org.apache.http.wire - << "Date: Sun, 19 Jul 2015 04:43:49 GMT[\r][\n]"
+F01:43:49.297 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+l01:43:49.297 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+N01:43:49.297 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+X01:43:49.297 [Test worker] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+k01:43:49.297 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+Y01:43:49.297 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+b01:43:49.297 [Test worker] DEBUG org.apache.http.headers - << Date: Sun, 19 Jul 2015 04:43:49 GMT
+q01:43:49.300 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+•01:43:49.301 [Test worker] DEBUG groovyx.net.http.RESTClient - Response code: 200; found handler: org.codehaus.groovy.runtime.MethodClosure@45565871
+e01:43:49.301 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsing response as: application/json
+I01:43:49.305 [Test worker] DEBUG org.apache.http.wire - << "4c8[\r][\n]"
+¤
+01:43:49.305 [Test worker] DEBUG org.apache.http.wire - << "[{"id":1,"name":"Anderson Santos","username":"anderson","email":"anderson.mends@gmail.com","password":"secret","submissions":[]},{"id":2,"name":"Daniel Silva","username":"daniel","email":"dbfs@ic.ufal.br","password":"secret","submissions":[]},{"id":3,"name":"Gustavo Neto","username":"gustavo","email":"gustavocosta@ic.ufal.br","password":"secret","submissions":[]},{"id":4,"name":"Henrique Ferreira Alves","username":"henrique","email":"hfa@ic.ufal.br","password":"secret","submissions":[]},{"id":5,"name":"J[0xc3][0xa1]rio J[0xc3][0xba]nior","username":"jario","email":"jjsj@ic.ufal.br","password":"secret","submissions":[]},{"id":6,"name":"Luccas Augusto","username":"luccas","email":"luccasaugusto@ic.ufal.br","password":"secret","submissions":[]},{"id":7,"name":"Manoel Neto","username":"manoel","email":"mjrn@ic.ufal.br","password":"secret","submissions":[]},{"id":8,"name":"Marcio Guimar[0xc3][0xa3]es","username":"marcio","email":"marcioaugustosg@gmail.com","password":"secret","submissions":[]},{"id":9,"name":"Marcos Neto","username":"marcos","email":"marcosjfneto@gmail.com","password":"secret","submissions":[]},{"id":10,"name":"Romero Malaquias","username":"romero","email":"romero.malaquias@gmail.com","password":"secret","submissions":[]}]"
+F01:43:49.306 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+G01:43:49.306 [Test worker] DEBUG org.apache.http.wire - << "0[\r][\n]"
+F01:43:49.306 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+ž01:43:49.306 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@215ea264
+t01:43:49.306 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+u01:43:49.308 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsed data to instance of: class java.util.ArrayList
+a01:43:49.343 [Test worker] DEBUG groovyx.net.http.RESTClient - GET http://localhost:8080/users/8
+}01:43:49.346 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+j01:43:49.347 [Test worker] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+f01:43:49.347 [Test worker] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+g01:43:49.347 [Test worker] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+i01:43:49.347 [Test worker] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+g01:43:49.347 [Test worker] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+d01:43:49.348 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+o01:43:49.348 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /users/8 HTTP/1.1
+[01:43:49.348 [Test worker] DEBUG org.apache.http.wire - >> "GET /users/8 HTTP/1.1[\r][\n]"
+Q01:43:49.348 [Test worker] DEBUG org.apache.http.wire - >> "Accept: */*[\r][\n]"
+Z01:43:49.348 [Test worker] DEBUG org.apache.http.wire - >> "Host: localhost:8080[\r][\n]"
+\01:43:49.348 [Test worker] DEBUG org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+F01:43:49.348 [Test worker] DEBUG org.apache.http.wire - >> "[\r][\n]"
+T01:43:49.348 [Test worker] DEBUG org.apache.http.headers - >> GET /users/8 HTTP/1.1
+J01:43:49.348 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+S01:43:49.348 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+U01:43:49.348 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+U01:43:49.399 [Test worker] DEBUG org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+_01:43:49.399 [Test worker] DEBUG org.apache.http.wire - << "Server: Apache-Coyote/1.1[\r][\n]"
+r01:43:49.400 [Test worker] DEBUG org.apache.http.wire - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+`01:43:49.401 [Test worker] DEBUG org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+i01:43:49.401 [Test worker] DEBUG org.apache.http.wire - << "Date: Sun, 19 Jul 2015 04:43:49 GMT[\r][\n]"
+F01:43:49.402 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+l01:43:49.402 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+N01:43:49.402 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+X01:43:49.402 [Test worker] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+k01:43:49.402 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+Y01:43:49.402 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+b01:43:49.403 [Test worker] DEBUG org.apache.http.headers - << Date: Sun, 19 Jul 2015 04:43:49 GMT
+q01:43:49.403 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+•01:43:49.403 [Test worker] DEBUG groovyx.net.http.RESTClient - Response code: 200; found handler: org.codehaus.groovy.runtime.MethodClosure@3a73a20f
+e01:43:49.407 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsing response as: application/json
+H01:43:49.407 [Test worker] DEBUG org.apache.http.wire - << "80[\r][\n]"
+È01:43:49.408 [Test worker] DEBUG org.apache.http.wire - << "{"id":8,"name":"Marcio Guimar[0xc3][0xa3]es","username":"marcio","email":"marcioaugustosg@gmail.com","password":"secret","submissions":[]}"
+F01:43:49.408 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+G01:43:49.408 [Test worker] DEBUG org.apache.http.wire - << "0[\r][\n]"
+F01:43:49.408 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+ž01:43:49.408 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@676dd840
+t01:43:49.409 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+~01:43:49.409 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsed data to instance of: class groovy.json.internal.LazyMap
+`01:43:49.485 [Test worker] DEBUG groovyx.net.http.RESTClient - POST http://localhost:8080/users
+}01:43:49.498 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+j01:43:49.499 [Test worker] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+f01:43:49.501 [Test worker] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+g01:43:49.503 [Test worker] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+i01:43:49.503 [Test worker] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+g01:43:49.504 [Test worker] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+d01:43:49.504 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+n01:43:49.504 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /users HTTP/1.1
+Z01:43:49.505 [Test worker] DEBUG org.apache.http.wire - >> "POST /users HTTP/1.1[\r][\n]"
+Q01:43:49.506 [Test worker] DEBUG org.apache.http.wire - >> "Accept: */*[\r][\n]"
+Y01:43:49.506 [Test worker] DEBUG org.apache.http.wire - >> "Content-Length: 103[\r][\n]"
+d01:43:49.507 [Test worker] DEBUG org.apache.http.wire - >> "Content-Type: application/json[\r][\n]"
+Z01:43:49.507 [Test worker] DEBUG org.apache.http.wire - >> "Host: localhost:8080[\r][\n]"
+\01:43:49.507 [Test worker] DEBUG org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+F01:43:49.507 [Test worker] DEBUG org.apache.http.wire - >> "[\r][\n]"
+S01:43:49.507 [Test worker] DEBUG org.apache.http.headers - >> POST /users HTTP/1.1
+J01:43:49.507 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+R01:43:49.514 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 103
+]01:43:49.514 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json
+S01:43:49.514 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+U01:43:49.514 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+¥01:43:49.515 [Test worker] DEBUG org.apache.http.wire - >> "{"name":"Usuario Teste","username":"usuario","email":"marcioasguimaraes@gmail.com","password":"secret"}"
+U01:43:49.563 [Test worker] DEBUG org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+_01:43:49.563 [Test worker] DEBUG org.apache.http.wire - << "Server: Apache-Coyote/1.1[\r][\n]"
+r01:43:49.563 [Test worker] DEBUG org.apache.http.wire - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+`01:43:49.563 [Test worker] DEBUG org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+i01:43:49.563 [Test worker] DEBUG org.apache.http.wire - << "Date: Sun, 19 Jul 2015 04:43:49 GMT[\r][\n]"
+F01:43:49.563 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+l01:43:49.563 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+N01:43:49.563 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+X01:43:49.563 [Test worker] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+k01:43:49.563 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+Y01:43:49.563 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+b01:43:49.563 [Test worker] DEBUG org.apache.http.headers - << Date: Sun, 19 Jul 2015 04:43:49 GMT
+q01:43:49.563 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+•01:43:49.563 [Test worker] DEBUG groovyx.net.http.RESTClient - Response code: 200; found handler: org.codehaus.groovy.runtime.MethodClosure@774dd998
+e01:43:49.563 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsing response as: application/json
+H01:43:49.567 [Test worker] DEBUG org.apache.http.wire - << "82[\r][\n]"
+À01:43:49.569 [Test worker] DEBUG org.apache.http.wire - << "{"id":11,"name":"Usuario Teste","username":"usuario","email":"marcioasguimaraes@gmail.com","password":"secret","submissions":null}"
+F01:43:49.570 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+G01:43:49.573 [Test worker] DEBUG org.apache.http.wire - << "0[\r][\n]"
+F01:43:49.573 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+ž01:43:49.573 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5fcf358e
+t01:43:49.573 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+~01:43:49.573 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsed data to instance of: class groovy.json.internal.LazyMap
+b01:43:49.576 [Test worker] DEBUG groovyx.net.http.RESTClient - PUT http://localhost:8080/users/11
+}01:43:49.578 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+j01:43:49.578 [Test worker] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+f01:43:49.579 [Test worker] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+g01:43:49.579 [Test worker] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+i01:43:49.579 [Test worker] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+g01:43:49.579 [Test worker] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+d01:43:49.579 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+p01:43:49.579 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: PUT /users/11 HTTP/1.1
+\01:43:49.579 [Test worker] DEBUG org.apache.http.wire - >> "PUT /users/11 HTTP/1.1[\r][\n]"
+Q01:43:49.579 [Test worker] DEBUG org.apache.http.wire - >> "Accept: */*[\r][\n]"
+X01:43:49.579 [Test worker] DEBUG org.apache.http.wire - >> "Content-Length: 68[\r][\n]"
+d01:43:49.579 [Test worker] DEBUG org.apache.http.wire - >> "Content-Type: application/json[\r][\n]"
+Z01:43:49.579 [Test worker] DEBUG org.apache.http.wire - >> "Host: localhost:8080[\r][\n]"
+\01:43:49.580 [Test worker] DEBUG org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+F01:43:49.580 [Test worker] DEBUG org.apache.http.wire - >> "[\r][\n]"
+U01:43:49.580 [Test worker] DEBUG org.apache.http.headers - >> PUT /users/11 HTTP/1.1
+J01:43:49.580 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+Q01:43:49.580 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 68
+]01:43:49.580 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/json
+S01:43:49.580 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+U01:43:49.580 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+‚01:43:49.580 [Test worker] DEBUG org.apache.http.wire - >> "{"name":"Usuario Teste 2","username":"usuario2","password":"secret"}"
+U01:43:49.625 [Test worker] DEBUG org.apache.http.wire - << "HTTP/1.1 200 OK[\r][\n]"
+_01:43:49.625 [Test worker] DEBUG org.apache.http.wire - << "Server: Apache-Coyote/1.1[\r][\n]"
+r01:43:49.625 [Test worker] DEBUG org.apache.http.wire - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+`01:43:49.625 [Test worker] DEBUG org.apache.http.wire - << "Transfer-Encoding: chunked[\r][\n]"
+i01:43:49.625 [Test worker] DEBUG org.apache.http.wire - << "Date: Sun, 19 Jul 2015 04:43:49 GMT[\r][\n]"
+F01:43:49.625 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+l01:43:49.625 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+N01:43:49.625 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+X01:43:49.625 [Test worker] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+k01:43:49.625 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json;charset=UTF-8
+Y01:43:49.625 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+b01:43:49.625 [Test worker] DEBUG org.apache.http.headers - << Date: Sun, 19 Jul 2015 04:43:49 GMT
+q01:43:49.625 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+•01:43:49.625 [Test worker] DEBUG groovyx.net.http.RESTClient - Response code: 200; found handler: org.codehaus.groovy.runtime.MethodClosure@35fc6118
+e01:43:49.626 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsing response as: application/json
+H01:43:49.626 [Test worker] DEBUG org.apache.http.wire - << "83[\r][\n]"
+Á01:43:49.626 [Test worker] DEBUG org.apache.http.wire - << "{"id":11,"name":"Usuario Teste 2","username":"usuario2","email":"marcioasguimaraes@gmail.com","password":"secret","submissions":[]}"
+F01:43:49.626 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+G01:43:49.627 [Test worker] DEBUG org.apache.http.wire - << "0[\r][\n]"
+F01:43:49.627 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+ž01:43:49.627 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2ce4ff26
+t01:43:49.627 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+~01:43:49.627 [Test worker] DEBUG groovyx.net.http.RESTClient - Parsed data to instance of: class groovy.json.internal.LazyMap
+e01:43:49.629 [Test worker] DEBUG groovyx.net.http.RESTClient - DELETE http://localhost:8080/users/11
+}01:43:49.632 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+j01:43:49.632 [Test worker] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:8080
+f01:43:49.632 [Test worker] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: best-match
+g01:43:49.632 [Test worker] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+i01:43:49.632 [Test worker] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+g01:43:49.632 [Test worker] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+d01:43:49.632 [Test worker] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+s01:43:49.632 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: DELETE /users/11 HTTP/1.1
+_01:43:49.633 [Test worker] DEBUG org.apache.http.wire - >> "DELETE /users/11 HTTP/1.1[\r][\n]"
+Q01:43:49.633 [Test worker] DEBUG org.apache.http.wire - >> "Accept: */*[\r][\n]"
+Z01:43:49.633 [Test worker] DEBUG org.apache.http.wire - >> "Host: localhost:8080[\r][\n]"
+\01:43:49.633 [Test worker] DEBUG org.apache.http.wire - >> "Connection: Keep-Alive[\r][\n]"
+F01:43:49.633 [Test worker] DEBUG org.apache.http.wire - >> "[\r][\n]"
+X01:43:49.633 [Test worker] DEBUG org.apache.http.headers - >> DELETE /users/11 HTTP/1.1
+J01:43:49.633 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+S01:43:49.633 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+U01:43:49.633 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+]01:43:49.668 [Test worker] DEBUG org.apache.http.wire - << "HTTP/1.1 204 No Content[\r][\n]"
+_01:43:49.668 [Test worker] DEBUG org.apache.http.wire - << "Server: Apache-Coyote/1.1[\r][\n]"
+i01:43:49.668 [Test worker] DEBUG org.apache.http.wire - << "Date: Sun, 19 Jul 2015 04:43:49 GMT[\r][\n]"
+F01:43:49.668 [Test worker] DEBUG org.apache.http.wire - << "[\r][\n]"
+t01:43:49.668 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 204 No Content
+V01:43:49.668 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 204 No Content
+X01:43:49.668 [Test worker] DEBUG org.apache.http.headers - << Server: Apache-Coyote/1.1
+b01:43:49.668 [Test worker] DEBUG org.apache.http.headers - << Date: Sun, 19 Jul 2015 04:43:49 GMT
+ž01:43:49.668 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1993f371
+|01:43:49.669 [Test worker] DEBUG o.a.h.i.conn.DefaultClientConnection - Connection 0.0.0.0:42713<->127.0.0.1:8080 shut down
+Œ01:43:49.669 [Test worker] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive for 9223372036854775807 MILLISECONDS
+•01:43:49.669 [Test worker] DEBUG groovyx.net.http.RESTClient - Response code: 204; found handler: org.codehaus.groovy.runtime.MethodClosure@120532aa
