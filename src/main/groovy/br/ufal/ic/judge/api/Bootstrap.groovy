@@ -20,16 +20,16 @@ class Bootstrap {
     }
 
     def createUsers() {
-        userRepository.save(new User(name: "Anderson Santos", email: "anderson.mends@gmail.com", username: "anderson", password: "secret"))
-        userRepository.save(new User(name: "Daniel Silva", email: "dbfs@ic.ufal.br", username: "daniel", password: "secret"))
-        userRepository.save(new User(name: "Gustavo Neto", email: "gustavocosta@ic.ufal.br", username: "gustavo", password: "secret"))
-        userRepository.save(new User(name: "Henrique Ferreira Alves", email: "hfa@ic.ufal.br", username: "henrique", password: "secret"))
-        userRepository.save(new User(name: "Jário Júnior", email: "jjsj@ic.ufal.br", username: "jario", password: "secret"))
-        userRepository.save(new User(name: "Luccas Augusto", email: "luccasaugusto@ic.ufal.br", username: "luccas", password: "secret"))
-        userRepository.save(new User(name: "Manoel Neto", email: "mjrn@ic.ufal.br", username: "manoel", password: "secret"))
-        userRepository.save(new User(name: "Marcio Guimarães", email: "marcioaugustosg@gmail.com", username: "marcio", password: "secret"))
-        userRepository.save(new User(name: "Marcos Neto", email: "marcosjfneto@gmail.com", username: "marcos", password: "secret"))
-        userRepository.save(new User(name: "Romero Malaquias", email: "romero.malaquias@gmail.com", username: "romero", password: "secret"))
+        userRepository.save(new User(name: "Anderson Santos", email: "romero.malaquias+1@gmail.com", username: "anderson", password: "secret"))
+        userRepository.save(new User(name: "Daniel Silva", email: "romero.malaquias+2@gmail.com", username: "daniel", password: "secret"))
+        userRepository.save(new User(name: "Gustavo Neto", email: "romero.malaquias+3@gmail.com", username: "gustavo", password: "secret"))
+        userRepository.save(new User(name: "Henrique Ferreira Alves", email: "romero.malaquias+4@gmail.com", username: "henrique", password: "secret"))
+        userRepository.save(new User(name: "Jário Júnior", email: "romero.malaquias+5@gmail.com", username: "jario", password: "secret"))
+        userRepository.save(new User(name: "Luccas Augusto", email: "romero.malaquias+6@gmail.com", username: "luccas", password: "secret"))
+        userRepository.save(new User(name: "Manoel Neto", email: "romero.malaquias+7@gmail.com", username: "manoel", password: "secret"))
+        userRepository.save(new User(name: "Marcio Guimarães", email: "romero.malaquias+8@gmail.com", username: "marcio", password: "secret"))
+        userRepository.save(new User(name: "Marcos Neto", email: "romero.malaquias+9@gmail.com", username: "marcos", password: "secret"))
+        userRepository.save(new User(name: "Romero Malaquias", email: "romero.malaquias+10@gmail.com", username: "romero", password: "secret"))
     }
 
 }

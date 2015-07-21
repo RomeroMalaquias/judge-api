@@ -3,34 +3,29 @@ package br.ufal.ic.judge.api.domain
 import com.fasterxml.jackson.annotation.JsonIgnore
 
 import javax.persistence.CascadeType
-import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.FetchType
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-import javax.persistence.OneToMany
-
+import javax.persistence.JoinColumn
+import javax.persistence.ManyToOne
 
 @Entity
-class User {
+class Similarity {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     Long id
 
-    String name
-
-    @Column(unique = true)
-    String username
-
-    @Column(unique = true)
-    String email
-
     @JsonIgnore
-    String password
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "submission_id")
+    Submission submission
 
-    @JsonIgnore
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-    List<Submission> submissions
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "similar_id")
+    Submission similar
+
+    Double rate
 
 }

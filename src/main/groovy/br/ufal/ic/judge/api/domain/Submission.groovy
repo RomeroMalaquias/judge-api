@@ -1,7 +1,7 @@
 package br.ufal.ic.judge.api.domain
 
-import com.fasterxml.jackson.annotation.JsonFilter
 import com.fasterxml.jackson.annotation.JsonFormat
+import com.fasterxml.jackson.annotation.JsonIgnore
 
 import javax.persistence.CascadeType
 import javax.persistence.Entity
@@ -11,6 +11,7 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.JoinColumn
 import javax.persistence.ManyToOne
+import javax.persistence.OneToMany
 
 @Entity
 class Submission {
@@ -33,8 +34,11 @@ class Submission {
     @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ssZ")
     Date dateCreated = new Date()
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     User user
 
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "submission")
+    List<Similarity> similarities
 }

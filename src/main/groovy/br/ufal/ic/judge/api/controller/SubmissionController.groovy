@@ -3,7 +3,10 @@ package br.ufal.ic.judge.api.controller
 import br.ufal.ic.judge.api.domain.Submission
 import br.ufal.ic.judge.api.repository.SubmissionRepository
 import br.ufal.ic.judge.api.repository.UserRepository
+import br.ufal.ic.judge.api.service.EmailService
 import br.ufal.ic.judge.api.service.EvaluatorService
+import br.ufal.ic.judge.api.service.SimilarityService
+import org.hibernate.validator.constraints.Email
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -24,6 +27,9 @@ class SubmissionController {
 
     @Autowired
     EvaluatorService evaluatorService
+
+    @Autowired
+    SimilarityService similarityService
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     def get(@PathVariable Long id) {
@@ -57,38 +63,20 @@ class SubmissionController {
 
         if (submissionInstance?.id) {
             evaluatorService.evaluate(submissionInstance)
+            similarityService.update()
             submissionInstance
         } else {
             new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR)
         }
     }
 
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    def update(@PathVariable Long id, @RequestBody Submission submission) {
-
-        Submission submissionInstance = submissionRepository.findOne(id)
-
-        submissionInstance.code = submission.code ?: submissionInstance.code
-        submissionInstance.output = submission.output ?: submissionInstance.output
-        submissionInstance.input = submission.input ?: submissionInstance.input
-        submissionInstance.language = submission.language ?: submissionInstance.language
-
-        submissionRepository.save(submissionInstance)
-
-        evaluatorService.evaluate(submissionInstance)
-
-        submissionInstance
-    }
-
-    @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
-    def delete(@PathVariable Long id) {
+    @RequestMapping(value = "/{id}/similarities", method = RequestMethod.GET)
+    def listSimilarities(@PathVariable Long id) {
 
         Submission submissionInstance = submissionRepository.findOne(id)
 
         if (submissionInstance) {
-            submissionRepository.delete(submissionInstance)
-            new ResponseEntity<String>(HttpStatus.NO_CONTENT)
+            submissionInstance.similarities
         } else {
             new ResponseEntity<String>(HttpStatus.NOT_FOUND)
         }
