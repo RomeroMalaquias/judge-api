@@ -3,6 +3,8 @@ package br.ufal.ic.judge.api.service
 import br.ufal.ic.judge.api.domain.Submission
 import br.ufal.ic.judge.api.rabbitmq.Receiver
 import com.fasterxml.jackson.databind.ObjectMapper
+import org.springframework.amqp.core.Message
+import org.springframework.amqp.core.MessageProperties
 import org.springframework.amqp.core.UniquelyNamedQueue
 import org.springframework.amqp.rabbit.connection.ConnectionFactory
 import org.springframework.amqp.core.Binding
@@ -64,23 +66,18 @@ class EvaluatorService {
 
     @PostConstruct
     def checkSubmissionsQueue() {
-        sendMessages()
         receiver().getLatch().await(10000, TimeUnit.MILLISECONDS)
     }
 
-    def sendMessages () {
-        Thread.start {
-            while (true) {
-                println "Waiting five seconds..."
-                Thread.sleep(5000)
-                println "Sending message..."
-                rabbitTemplate.convertAndSend(queue.name, "Hello from RabbitMQ")
-            }
-        }
-    }
-
     def evaluate(Submission submission) {
-        rabbitTemplate.convertAndSend(queue.name, new ObjectMapper().writeValueAsString(submission))
+
+        def mapper = new ObjectMapper()
+
+        rabbitTemplate.convertAndSend(
+                "EXCHANGE",
+                "evaluator", new Message(mapper.writeValueAsString(submission).bytes,
+                new MessageProperties(replyTo: queue.name))
+        )
     }
 
 }

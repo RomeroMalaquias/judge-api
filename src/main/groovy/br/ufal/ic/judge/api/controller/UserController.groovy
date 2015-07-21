@@ -18,23 +18,23 @@ class UserController {
     UserRepository userRepository
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    def getUser(@PathVariable Long id) {
+    def get(@PathVariable Long id) {
         userRepository.findOne(id)
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    def getUsers() {
+    def list() {
         userRepository.findAll()
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    def saveUser(@RequestBody User user) {
+    def save(@RequestBody User user) {
         userRepository.save(user)
     }
 
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    def updateUser(@PathVariable Long id, @RequestBody User user) {
+    def update(@PathVariable Long id, @RequestBody User user) {
 
         User userInstance = userRepository.findOne(id)
 
@@ -47,7 +47,7 @@ class UserController {
     }
 
     @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
-    def deleteUser(@PathVariable Long id) {
+    def delete(@PathVariable Long id) {
 
         User userInstance = userRepository.findOne(id)
 

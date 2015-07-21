@@ -1,5 +1,7 @@
 package br.ufal.ic.judge.api.domain
 
+import com.fasterxml.jackson.annotation.JsonIgnore
+
 import javax.persistence.CascadeType
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -24,8 +26,10 @@ class User {
     @Column(unique = true)
     String email
 
+    @JsonIgnore
     String password
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "user")
     List<Submission> submissions
 

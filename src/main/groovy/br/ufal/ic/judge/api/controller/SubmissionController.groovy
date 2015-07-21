@@ -2,6 +2,7 @@ package br.ufal.ic.judge.api.controller
 
 import br.ufal.ic.judge.api.domain.Submission
 import br.ufal.ic.judge.api.repository.SubmissionRepository
+import br.ufal.ic.judge.api.repository.UserRepository
 import br.ufal.ic.judge.api.service.EvaluatorService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
@@ -10,12 +11,16 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
+import org.springframework.web.bind.annotation.RestController
 
-@RequestMapping("/submissions")
+@RestController @RequestMapping("/submissions")
 class SubmissionController {
 
     @Autowired
     SubmissionRepository submissionRepository
+
+    @Autowired
+    UserRepository userRepository
 
     @Autowired
     EvaluatorService evaluatorService
@@ -32,7 +37,30 @@ class SubmissionController {
 
     @RequestMapping(method = RequestMethod.POST)
     def save(@RequestBody Submission submission) {
-        submissionRepository.save(submission)
+
+        Submission submissionInstance = null
+
+        try {
+            submissionInstance = new Submission(
+                    code: submission.code,
+                    output: submission.output,
+                    input: submission.input,
+                    language: submission.language,
+                    user: userRepository.findOne(submission.user.id)
+            )
+
+            submissionInstance = submissionRepository.save(submissionInstance)
+        } catch(Exception e) {
+            e.printStackTrace()
+            new ResponseEntity<String>(HttpStatus.BAD_REQUEST)
+        }
+
+        if (submissionInstance?.id) {
+            evaluatorService.evaluate(submissionInstance)
+            submissionInstance
+        } else {
+            new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR)
+        }
     }
 
 
@@ -43,8 +71,8 @@ class SubmissionController {
 
         submissionInstance.code = submission.code ?: submissionInstance.code
         submissionInstance.output = submission.output ?: submissionInstance.output
+        submissionInstance.input = submission.input ?: submissionInstance.input
         submissionInstance.language = submission.language ?: submissionInstance.language
-        submissionInstance.status = submission.status ?:submissionInstance.status
 
         submissionRepository.save(submissionInstance)
 
